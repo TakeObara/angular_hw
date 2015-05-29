@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="take_todoList.js"></script>
+	<link rel="stylesheet" href="take_todoList.css"></script>
+</head>
+<body>
+	<h1>TODO LIST</h1>
+	<div ng-controller="TodoListController as todoList">
+
+		<!-- dialog which appears onclick:add ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<div id="dialog-background" class="remove"></div>
+		<div id="add-dialog" class="remove">
+			<input ng-model="todoList.todoText"  type="text" size="30" placeholder="add new todo here!" /><br>
+			<input ng-click="todoList.addTodo()" class="button" type="button" value="add" />
+			<input ng-click="todoList.closeAddDialog()" class="button" type="button" value="exit" />
+		</div>
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+		<!-- dialog which appears onclick:remove ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<div id="dialog-background" class="remove"></div>
+		<div id="remove-dialog" class="remove">
+			<p>You really want to remove checked-tasks?</p>
+			<input ng-click="todoList.removeTodo()" type="button" class="button" value="remove"/>
+			<input ng-click="todoList.closeRemoveDialog()" class="button" type="button" value="exit" />
+		</div>
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+		<!-- Show Task List ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<input ng-click="todoList.openAddDialog()" type="button" name="taskAdd" id="taskAdd" value="add" class="button" />
+		<input ng-click="todoList.openRemoveDialog()" type="button" name="taskRemove" id="taskRemove" value="remove" class="button" />
+		<ul class="unstyled">
+			<li ng-repeat="todo in todoList.todos">
+				<input type="checkbox" ng-model="todo.done" />
+				<span class="done-{{todo.done}}">{{todo.text}}</span>
+			</li>
+		</ul>
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	</div>
+</body>
+</html>

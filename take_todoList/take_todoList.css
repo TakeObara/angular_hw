@@ -1,0 +1,35 @@
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.remove{
+	display: none;
+}
+
+.button{
+	display:inline-block;
+	font-size:large;
+}
+
+.dialog-background {
+        position: absolute;
+        top:0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        color: #000000;
+
+        background-color: #333;
+        opacity: 0.5;
+}
+.dialog{
+	position: absolute;
+    border-radius: 6px 6px 6px 6px;
+    left: 40%;
+    top:150;
+    background-color: white;
+    padding: 10px 14px;
+    width: 500px;
+    height: 100px;
+}

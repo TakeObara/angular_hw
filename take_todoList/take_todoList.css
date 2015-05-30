@@ -12,6 +12,10 @@
 	font-size:large;
 }
 
+.text{
+    display: :inline-block;
+}
+
 .dialog-background {
         position: absolute;
         top:0px;

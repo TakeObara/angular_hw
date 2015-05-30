@@ -4,11 +4,20 @@ angular.module('todoApp', [])
     var todoList = this;
     var elementAddDialog=document.getElementById("add-dialog");
     var elementRemoveDialog=document.getElementById("remove-dialog");
-	var elementDialogBackground=document.getElementById("dialog-background");
+	  var elementDialogBackground=document.getElementById("dialog-background");
     
     todoList.todos = [
       {text:'first_task', done:true},
-      {text:'second_task', done:false}];
+      {text:'second_task', done:false},
+      {text:'thrid_task', done:false},
+      {text:'forth_task', done:false},
+      {text:'fifth_task', done:false},
+      {text:'sixth_task', done:false},
+      {text:'seventh_task', done:false},
+      {text:'eighth_task', done:false},
+      {text:'ninth_task', done:false},
+      {text:'tenth_task', done:false},
+      ];
 
      //関数定義---------------------------------------------------------------------
 
@@ -26,6 +35,7 @@ angular.module('todoApp', [])
 
     //add用のダイアログを閉じる
     todoList.closeAddDialog=function(){
+    	todoList.todoText = '';
     	elementAddDialog.className="remove";
     	elementDialogBackground.className="remove";
     };
@@ -46,11 +56,11 @@ angular.module('todoApp', [])
   //todoを削除する処理
 	todoList.removeTodo=function(){
   		var oldTodos = todoList.todos;
-      	todoList.todos = [];
-      	angular.forEach(oldTodos, function(todo) {
+      todoList.todos = [];
+      angular.forEach(oldTodos, function(todo) {
         if (!todo.done) todoList.todos.push(todo);
-      	});
-      	todoList.closeRemoveDialog();
+      });
+      todoList.closeRemoveDialog();
   	};
   //-----------------------------------------------------------------------
 });

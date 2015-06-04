@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="fadeInOut">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../angular.js"></script>
+	<script src="mains.js"></script> 
+</head>
+<body>
+	<div ng-controller="fadeInOutController as fadeInOut" >
+		<input type="text" size="30" ng-model="textBox" /><br/>
+		<input ng-click="fadeInOut.playButton()" type="button" value="play" />
+	</div>
+	<div ng-repeat="loop in $scope.loop">
+		<div class="box blue myimg show"></div>
+	</div>
+</body>
+</html>

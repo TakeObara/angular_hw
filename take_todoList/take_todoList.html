@@ -11,14 +11,14 @@
 	<h1>TODO LIST</h1>
 	<div ng-controller="TodoListController as todoList">
 
-		<!-- dialog which appears onclick:add ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<!-- dialog which appears onclick:add ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 		<div id="dialog-background" class="remove"></div>
 		<div id="add-dialog" class="remove">
 			<input ng-model="todoList.todoText"  type="text" size="30" placeholder="add new todo here!" /><br>
 			<input ng-click="todoList.addTodo()" class="button" type="button" value="add" />
 			<input ng-click="todoList.closeAddDialog()" class="button" type="button" value="exit" />
 		</div>
-		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 
 		<!-- dialog which appears onclick:remove ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 		<div id="dialog-background" class="remove"></div>
@@ -27,9 +27,9 @@
 			<input ng-click="todoList.removeTodo()" type="button" class="button" value="remove"/>
 			<input ng-click="todoList.closeRemoveDialog()" class="button" type="button" value="exit" />
 		</div>
-		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 
-		<!-- Show Task List ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<!-- Show Task List ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 		<input ng-click="todoList.openAddDialog()" type="button" id="taskAdd" value="add" class="button" />
 		<input ng-click="todoList.openRemoveDialog()" type="button" id="taskRemove" value="remove" class="button" />
 		<input type="text" ng-model="todoList.search" class="search-query" id="todos_search"
@@ -48,7 +48,7 @@
 		  </tr>
 		  </tbody>
 		</table>
-		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 	</div>
 </body>
 </html>

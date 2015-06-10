@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calc</title>
+</head>
+<body>
+	<input type="button" value="add" id="button" />
+	<br />
+	<input type="text" id="num1" value="1" />
+	+
+	<input type="text" id="num2" value="2" />
+	=
+	<input type="text" id="sum" value=""/>
+</body>
+<script type="text/javascript">
+	var eButton=document.getElementById("button");
+	var eName=document.getElementsByName("1");
+	console.log(eName);
+	eButton.addEventListener("click",function(){
+		var iNum1=parseInt(num1.value);
+		var iNum2=parseInt(num2.value);
+		sum.value=String(iNum1+iNum2);
+	});
+</script>
+</html>

@@ -65,12 +65,12 @@ angular.module("App",[])
 		//process if ctrl+A is pressed
 		var selectTagCtrlA=function(){
 			//get <p> element
-			var elements_p=document.getElementsByTagName("p");
-			if(elements_p && elements_p.length > 0 ){//<p> exist;
-				if(currentPlace >= elements_p.length){
+			var elementsTagP=document.getElementsByTagName("p");
+			if(elementsTagP && elementsTagP.length > 0 ){//<p> exist;
+				if(currentPlace >= elementsTagP.length){
 					currentPlace=0;
 				}
-				highlightText(elements_p[currentPlace]);
+				highlightText(elementsTagP[currentPlace]);
 				currentPlace++;
 			}
 		};

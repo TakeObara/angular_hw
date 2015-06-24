@@ -7,9 +7,9 @@ angular.module("App",[])
 		$scope.hoge="hoge fuga piyo";
 		
 		//key variable
-		var ctrl_key;
-		var temp_key;
-		var current_place=0;
+		var ctrlKey;
+		var tempKey;
+		var currentPlace=0;
 
 		//key_code
 		var keyEvent={
@@ -24,19 +24,19 @@ angular.module("App",[])
 		//key_class
 		var judgePressedKey={
 	        init:function(e){
-	            ctrl_key=false;
-	            temp_key=0;
+	            ctrlKey=false;
+	            tempKey=0;
 	            e.preventDefault();
 	        },
 	        //if Ctrl is pressed or not
 	        isCtrlPressed:function(e){
-	            ctrl_key=e.ctrlKey;
-	            return ctrl_key;
+	            ctrlKey=e.ctrlKey;
+	            return ctrlKey;
 	        },
 	        //if _keyCode is pressed or not
 	        isKeyPressed:function(e,_keyCode){
-	            temp_key=e.keyCode;
-	            if(temp_key==_keyCode){
+	            tempKey=e.keyCode;
+	            if(tempKey==_keyCode){
 	                return true;
 	            }
 	            return false;
@@ -44,13 +44,13 @@ angular.module("App",[])
     	};
 
     	//keydown_function
-    	var keydown_action=function(e){
+    	var keydownAction=function(e){
     		//Ctrl
         	if(judgePressedKey.isCtrlPressed(e)){
         		//Ctrl+A
             	if(judgePressedKey.isKeyPressed(e,keyEvent.KEY_A)){
             		//process
-            		select_tag_CtrlA();
+            		selectTagCtrlA();
                 	judgePressedKey.init(e);
             	}
             	//Ctrl+E
@@ -63,15 +63,15 @@ angular.module("App",[])
    		};
 
 		//process if ctrl+A is pressed
-		var select_tag_CtrlA=function(){
+		var selectTagCtrlA=function(){
 			//get <p> element
 			var elements_p=document.getElementsByTagName("p");
 			if(elements_p && elements_p.length > 0 ){//<p> exist;
-				if(current_place >= elements_p.length){
-					current_place=0;
+				if(currentPlace >= elements_p.length){
+					currentPlace=0;
 				}
-				highlightText(elements_p[current_place]);
-				current_place++;
+				highlightText(elements_p[currentPlace]);
+				currentPlace++;
 			}
 		};
 
@@ -87,7 +87,7 @@ angular.module("App",[])
 		};
 
 		//key event process
-		document.addEventListener("keydown",keydown_action);
+		document.addEventListener("keydown",keydownAction);
 
 		//----------------------------------------------------------------------------------
 

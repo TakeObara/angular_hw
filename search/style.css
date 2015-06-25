@@ -1,0 +1,38 @@
+
+.markdown_help > ul {
+    width: 100%;
+    list-style: none;
+    display: block;
+}
+.markdown_help > .form-control{
+    font-size: 14px;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+.markdown_help > ul > li{
+    float: left;
+    display: block;
+    width: 200px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.markdown_help > ul > li > div {
+    width: 100%;
+}
+.markdown_help > ul > li > div.md-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.markdown_help > ul > li > div.md-desc {
+    font-size: 13px;
+    min-height: 160px;
+}
+.markdown_help > ul > li > div.md-desc > * { display: inline; }
+.markdown_help > ul > li > div.md-desc > img {border: 1px solid #ccc; }
+.markdown_help > ul > li > div.md-desc > .small-block { float: left; }
+.markdown_help > ul > li > div.md-desc > .small-block > ul {list-style-type: disc;}
+.markdown_help > ul > li > div.md-desc > .small-block > ul > li { 
+    display: list-item;
+    margin-left: 40px;
+ }

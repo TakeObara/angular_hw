@@ -19,7 +19,7 @@
 
     <div class="markdown_help clearfix">
         <ul>
-            <li ng-repeat="md in mdList | filter:searchWord ">
+            <li ng-repeat="md in mdList | filter: searchWord  ">
                 <div class="md-title" ng-bind-html=" md.title | highlight : searchWord "></div>
                 <div class="md-desc" ng-bind-html=" md.description | highlight : searchWord"></div>
                 <div class="md-desc" ng-bind-html="md.tag"></div>
